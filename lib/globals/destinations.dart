@@ -7,8 +7,8 @@ List<Widget> views = const <Widget>[
 
 List<Widget> destinations = const <Widget>[
   NavigationDestination(
-    icon: Icon(Icons.auto_stories_outlined),
-    label: 'Boîtes à livres',
+    icon: Icon(Icons.local_parking_outlined),
+    label: 'Parkings',
   ),
   NavigationDestination(
     icon: Icon(Icons.shopping_basket_outlined),
