@@ -37,15 +37,15 @@ class Parking {
         bikeSpots: json['emplacement_cycles'],
       );
 
-  Map<String, dynamic> toJson() => {
-        'numero_parking': code,
-        'nom_parking': label,
-        'adresse': address,
-        'nombre_places_libres': availableSpots,
-        'nombre_de_places_totales': totalSpots,
-        'places_pmr': accessibleSpots,
-        'aires_de_moto': motorCycleSpots,
-        'places_vehicules_electriques': electricVehicleSpots,
-        'emplacement_cycles': bikeSpots,
-      };
+  // Map<String, dynamic> toJson() => {
+  //       'numero_parking': code,
+  //       'nom_parking': label,
+  //       'adresse': address,
+  //       'nombre_places_libres': availableSpots,
+  //       'nombre_de_places_totales': totalSpots,
+  //       'places_pmr': accessibleSpots,
+  //       'aires_de_moto': motorCycleSpots,
+  //       'places_vehicules_electriques': electricVehicleSpots,
+  //       'emplacement_cycles': bikeSpots,
+  //     };
 }

@@ -1,37 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:petite_appli/models/Parking.dart';
+import 'package:petite_appli/models/Books.dart';
 import 'package:petite_appli/services/getMethods.dart';
 
-class ParkingView extends StatefulWidget {
-  const ParkingView({super.key});
+class BooksView extends StatefulWidget {
+  const BooksView({super.key});
 
   @override
-  State<ParkingView> createState() => _ParkingViewState();
+  State<BooksView> createState() => _BooksViewState();
 }
 
-class _ParkingViewState extends State<ParkingView> {
+class _BooksViewState extends State<BooksView> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: fetchParkingAreas(),
+      future: fetchBooks(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(
             child: CircularProgressIndicator(),
           );
         } else if (snapshot.hasData) {
-          List<Parking> parkings = snapshot.data!;
+          List<Book> books = snapshot.data!;
           return ListView.builder(
-              itemCount: parkings.length,
+              itemCount: books.length,
               itemBuilder: (context, index) {
-                Parking parking = parkings[index];
-                String spotRatio =
-                    '${parking.availableSpots} / ${parking.totalSpots}';
-
+                Book book = books[index];
+                String address = '${book.addressNumber} ${book.address}';
                 return ListTile(
-                  title: Text(parking.label),
-                  subtitle: Text(parking.address),
-                  leading: Text(spotRatio),
+                  title: Text(book.label),
+                  subtitle: Text(address),
+                  leading: Text(book.city),
                 );
               });
         } else {

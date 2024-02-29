@@ -13,7 +13,7 @@ class _HomeViewState extends State<HomeView> {
 
   List<String> titles = [
     "Places de parking dispo",
-    "page2",
+    "Boîtes à livres",
     "page3",
     "page4",
   ];
